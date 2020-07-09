@@ -74,17 +74,16 @@ def auto_adjust(data):
     df["Adj High"] = df["High"] / ratio
     df["Adj Low"] = df["Low"] / ratio
 
-    df.drop(
-        ["Open", "High", "Low", "Close"],
-        axis=1, inplace=True)
+    #df.drop(
+    #    ["Open", "High", "Low", "Close"],
+    #    axis=1, inplace=True)
 
-    df.rename(columns={
-        "Adj Open": "Open", "Adj High": "High",
-        "Adj Low": "Low", "Adj Close": "Close"
-    }, inplace=True)
-
-    df = df[["Open", "High", "Low", "Close", "Volume"]]
-    return df[["Open", "High", "Low", "Close", "Volume"]]
+    #df.rename(columns={
+    #    "Adj Open": "Open", "Adj High": "High",
+    #    "Adj Low": "Low", "Adj Close": "Close"
+    #}, inplace=True)
+    
+    return df[["Open", "High", "Low", "Close", "Adj Open", "Adj High", "Adj Low", "Adj Close", "Volume"]]
 
 
 def back_adjust(data):
