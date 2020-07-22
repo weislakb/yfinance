@@ -37,7 +37,7 @@ except ImportError:
 def empty_df(index=[]):
     empty = _pd.DataFrame(index=index, data={
         'Open': _np.nan, 'High': _np.nan, 'Low': _np.nan,
-        'Close': _np.nan, 'Adj Close': _np.nan, 'Volume': _np.nan})
+        'Close': _np.nan, 'Adj Open': _np.nan, 'Adj High': _np.nan, 'Adj Low': _np.nan, 'Adj Close': _np.nan, 'Volume': _np.nan})
     empty.index.name = 'Date'
     return empty
 
